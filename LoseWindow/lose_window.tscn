@@ -7,24 +7,35 @@ size = Vector2i(1280, 720)
 visible = true
 unfocusable = true
 
-[node name="Label_GameOver" type="Label" parent="."]
-anchors_preset = 5
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -46.0
-offset_right = 46.0
-offset_bottom = 23.0
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 45
-text = "Game Over"
-horizontal_alignment = 1
-vertical_alignment = 1
+grow_vertical = 2
+
+[node name="Label_GameOver" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -125.0
+offset_top = -200.0
+offset_right = 192.0
+offset_bottom = -131.0
+theme_override_font_sizes/font_size = 50
+text = "Game over"
+vertical_alignment = 3
 uppercase = true
 
-[node name="Label_Option" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Continue?"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
+[node name="Label_FinalPoints" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -200.0
+offset_right = 254.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 45
+text = "Your score: 50 points"

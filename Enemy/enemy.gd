@@ -10,16 +10,24 @@ func _ready() -> void:
 	initial_x_pos = position.x
 
 func _physics_process(delta: float) -> void:
-	# Calculate the direction to move toward the ball
-	var target_y = ball.position.y
-	var direction = sign(target_y - position.y)
-
-	# Smoothly adjust velocity toward target
-	velocity.y = lerp(velocity.y, direction * SPEED, SMOOTH_ACCEL * delta)
-
 	# Lock the paddle's x position
 	velocity.x = 0
 	position.x = initial_x_pos
+	
+	# Calculate the direction to move toward the ball
+	var ballPosition = ball.position.y
+	position.y = ballPosition
+	if position.y != ballPosition:
+		velocity.y = ball.linear_velocity.y
 
 	# Move the paddle using the physics engine
 	move_and_slide()
+	
+	# Correct collision if enemy paddl touches upper or lower bounds
+	var collision = get_slide_collision(0)
+	if collision: 
+		if collision.get_collider().name == 'CollisionShape2D4':
+			position.y = position.y - 1
+		elif collision.get_collider().name == 'CollisionShape2D2':
+			position.y = position.y + 1
+		
