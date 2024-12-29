@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://blvxq0j55vc5b"]
+
+[ext_resource type="Script" path="res://PointsLabel/points_label.gd" id="1_p33j2"]
+
+[sub_resource type="SystemFont" id="SystemFont_46cj5"]
+
+[node name="PointsLabel" type="Label"]
+anchors_preset = -1
+anchor_left = 0.16
+anchor_top = 0.207
+anchor_right = 0.16
+anchor_bottom = 0.207
+offset_left = 626.8
+offset_top = -191.56
+offset_right = 1065.8
+offset_bottom = 53.44
+theme_override_fonts/font = SubResource("SystemFont_46cj5")
+theme_override_font_sizes/font_size = 100
+text = "0
+"
+script = ExtResource("1_p33j2")

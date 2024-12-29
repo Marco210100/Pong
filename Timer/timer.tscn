@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://iid0h1w5u8s7"]
+
+[node name="Timer" type="Timer"]
+process_callback = 0

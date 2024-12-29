@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cvevdhavilnas"]
+
+[node name="LoseWindow" type="Popup"]
+mode = 3
+initial_position = 1
+size = Vector2i(1280, 720)
+visible = true
+unfocusable = true
+
+[node name="Label_GameOver" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.0
+offset_right = 46.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 45
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label_Option" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Continue?"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

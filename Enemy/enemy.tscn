@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2qsjhwdmnrt8"]
+
+[ext_resource type="Script" path="res://Enemy/enemy.gd" id="1_dmruo"]
+[ext_resource type="Texture2D" uid="uid://dv8euxvlt13iv" path="res://Enemy/brown_paddle.png" id="2_lcien"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uawy0"]
+size = Vector2(28, 281)
+
+[node name="Enemy" type="CharacterBody2D"]
+scale = Vector2(1.67174, 1.38568)
+motion_mode = 1
+slide_on_ceiling = false
+script = ExtResource("1_dmruo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1110.22, 361.555)
+scale = Vector2(2.29801, 5.16857)
+texture = ExtResource("2_lcien")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1092.01, 376.003)
+shape = SubResource("RectangleShape2D_uawy0")
